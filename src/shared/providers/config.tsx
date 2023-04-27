@@ -1,4 +1,3 @@
-import React from "react";
 import { NavlinkData } from "./types";
 import { FiSettings, FiTrendingUp } from "react-icons/fi";
 

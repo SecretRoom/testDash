@@ -20,4 +20,4 @@ type DB = {
 }
 
 
-export type { API, User, Users }
+export type { API, User, Users, DB }

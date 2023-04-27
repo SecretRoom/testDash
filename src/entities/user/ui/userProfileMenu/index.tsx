@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { getUserData, logout, User } from 'entities/user/model'
 import { Avatar, Box, HStack, Menu, MenuButton, MenuItem, MenuList, Text, VStack, useColorModeValue } from '@chakra-ui/react'
 import { FiChevronDown } from 'react-icons/fi'
