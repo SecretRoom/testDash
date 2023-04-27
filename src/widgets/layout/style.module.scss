@@ -1,5 +1,16 @@
 .workspace {
   display: grid;
-  grid-template-rows: max-content 1fr;
   height: 100%;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas: 'a b' 'a c';
+  @media screen and (min-width: 48em){
+    grid-template-columns: max-content 1fr;
+  }
+  grid-template-columns: 0px 1fr;
+  overflow: hidden;
+  // background: #f9f9fb;
+}
+
+.content {
+  grid-area: c;
 }

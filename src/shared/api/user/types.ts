@@ -1,5 +1,5 @@
 
-export type LoginAPI = {
+export type UserAPI = {
   dataSingIn: {
     login: string
     psw: string

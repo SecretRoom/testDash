@@ -1,21 +1,25 @@
 import { useMutation } from '@tanstack/react-query'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
-import { LoginAPI } from 'shared/api/login/types'
+import { UserAPI } from 'shared/api/user/types'
 import { loginA } from './api'
 import { LoginPage } from './types'
 import { UI } from './ui'
+import { setUserData } from 'entities/user/model'
+
 
 const LoginForm = () => {
   const [login, setLogin] = useState<LoginPage['login']>('')
   const [psw, setPsw] = useState<LoginPage['psw']>('')
   const navigate = useNavigate()
   const mutation = useMutation({
-    mutationFn: (data: LoginAPI['dataSingIn']) => {
+    mutationFn: (data: UserAPI['dataSingIn']) => {
       return loginA(data)
     },
-    onSuccess: async () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    onSuccess: ({ data }: any )  => {
       localStorage.setItem('isAuth', '1')
+      setUserData(data)
       navigate("/")
     },
   })

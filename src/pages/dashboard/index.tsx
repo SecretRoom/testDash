@@ -7,4 +7,4 @@ const Dashboard = () => {
   )
 }
 
-export default withLayout(Dashboard)
+export { Dashboard }
