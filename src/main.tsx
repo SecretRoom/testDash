@@ -5,7 +5,10 @@ import App from 'app'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { worker } from 'mocks/browser'
 
-worker.start()
+if (process.env['NODE_ENV'] === 'development') {
+  worker.start()
+}
+
 const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

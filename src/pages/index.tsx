@@ -2,7 +2,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Login } from "./login";
 import { PrivateRoute } from "features/privatRouter";
-import {Dashboard} from "./dashboard";
+import { Dashboards } from "./dashboards";
 import { withLayout } from "widgets/layout/with-layout";
 import { RouteData } from "shared/providers/types";
 
@@ -11,7 +11,7 @@ const Test = () => (
 )
 
 const routes: RouteData[] =  [
-  { path: '/', element: <Dashboard />, key: 'dashboard_page', name: 'Dashboard'  },
+  { path: '/', element: <Dashboards />, key: 'dashboard_page', name: 'Dashboards'  },
   { path: '/test', element: <Test />, key: 'test_page', name: 'test'  },
 ]
 

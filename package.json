@@ -7,7 +7,7 @@
     "dev": "vite --port 3000",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "preview": "vite preview  --port 3000",
     "deploy": "gh-pages -d dist",
     "open": "open https://secretroom.github.io/testDash/"
   },
@@ -30,6 +30,7 @@
     "react-query": "^3.39.3",
     "react-router": "^6.10.0",
     "react-router-dom": "^6.10.0",
+    "recharts": "^2.5.0",
     "sass": "^1.62.0",
     "vite-tsconfig-paths": "^4.2.0"
   },

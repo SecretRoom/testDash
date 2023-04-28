@@ -10,9 +10,9 @@ const Layout = (component: () => React.ReactNode) => () => {
   return location.pathname !== '/login' ? (
     <Box className={style["workspace"]} bg={useColorModeValue('gray.100', 'gray.900')}>
       <Navbar />
-      <div className={style["content"]}>
+      <Box className={style["content"]}>
         {component()}
-      </div>     
+      </Box>     
     </Box>
   ) 
   : (<>{component()}</>)

@@ -54,12 +54,15 @@ interface SidebarProps extends BoxProps {
 }
 
 const SidebarContent =  ({ onClose, ...rest }: SidebarProps) => {
+  // -webkit-box-shadow: 0px 5px 10px 2px rgba(112, 105, 248, 0.4);
+  // -moz-box-shadow: 0px 5px 10px 2px rgba(112, 105, 248, 0.4);
+  // box-shadow: 0px 5px 10px 2px rgba(112, 105, 248, 0.4);
   return (
-    <Box className={style['sidebar']} bg={useColorModeValue('gray.100', 'gray.900')} >
+    <Box className={style['sidebar']}>
       <Box
         transition="3s ease"
-        bg={useColorModeValue('#7069f8', '#7069f8')}
-        pos="fixed"
+        bg={useColorModeValue('purple.400', 'purple.700')}
+        boxShadow='lg'
         h="full"
         className={style['sidebar-content']}
         {...rest}>

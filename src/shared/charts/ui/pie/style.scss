@@ -1,0 +1,30 @@
+.chart-pie_content {
+  overflow-x: overlay;
+  overflow-y: hidden;
+  display: grid;
+  width: 300px;
+  height: 300px;
+  // grid-template-rows: max-content 1fr
+  .recharts-legend-item-text{
+    max-width: 150px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 16px !important;
+    line-height: 1.2;
+    // padding-top: 10px
+  }
+  .custom-label{
+    pointer-events: none;
+    font-size: 16px !important;
+  }
+  .custom-label_dec{
+    pointer-events: none;
+    font-size: 20px !important;
+  }
+  .decompose-label{
+    text-align: end;
+    font-size: 16px !important;
+    pointer-events: none;
+    }
+}
