@@ -2,10 +2,14 @@ import { withProviders } from './providers'
 import { Routing } from 'pages'
 
 import './index.scss'
+import Fonts from './fonts/fonts'
 
 const App = () => {
   return (
-    <Routing />
+    <>
+      <Fonts />
+      <Routing />
+    </>
   )
 }
 

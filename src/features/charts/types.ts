@@ -1,6 +1,6 @@
 type ValueOf<T> = T[keyof T]
 
-enum chartTypes {
+export enum chartTypes {
   Pie=1,
   Line=2,
   Bar=3,
@@ -12,17 +12,19 @@ enum infoTypes {
 }
 
 export type Chart = {
-  title: string
+  title?: string
   id: number
   chartType: ValueOf<typeof chartTypes>
   items: {
     name: string
     value: {
       [key: string]: number
-    } | number
+    } | number 
     info?: {
       type: ValueOf<typeof infoTypes>
       [key: string]: string
     }
-  }[]
+  }[] | {
+      [key: string]: number
+    }[] | any
 }

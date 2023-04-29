@@ -3,7 +3,7 @@ import { Axios } from "shared/utils/fetch"
 
 const DashboardsAPI = {
   getDashboards: async (): Promise<Dashboard[]> => {
-    return await Axios.get('/dashboards')
+    return (await Axios.get('/dashboards')).data
   }
 }
 

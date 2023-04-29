@@ -19,7 +19,15 @@ export const handlers = [
     localforage.setItem('isAuth', true)
     return res(
       ctx.status(200),
-      ctx.json(user)
+      ctx.json(R.dissoc('psw',user))
+    )
+  }),
+  rest.get('/api/dashboards', async(_req, res, ctx) => {
+    const data = await getMockData(ctx, 'dashboards')
+    if(R.isNil(data)) return res(ctx.status(204), ctx.json([]))
+    return res(
+      ctx.status(200),
+      ctx.json(data as any)
     )
   })
 ]

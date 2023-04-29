@@ -11,7 +11,7 @@ export const COLORS = [
   // '#f97b72',
   // '#4b4b8f',
   // '#A5AA99',
-  '#8951bd', // prism
+  '#9F7AEA', // prism
   '#1D6996',
   '#38A6A5',
   '#0F8554',

@@ -14,7 +14,8 @@ export const getDashboardById = <T>(callBack: (value: T) => void, id?: Dashboard
   })
 }
 
-export const setDashboards = <T>(value: T) => {
+const setDashboards = <T>(value: T) => {
   localforage.setItem('dashboards', value)
 }
 
+export { setDashboards }

@@ -1,4 +1,4 @@
-import { Chart } from "shared/charts/types"
+import { Chart } from "features/charts/types"
 
 export type Dashboard = {
   id: number

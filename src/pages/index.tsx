@@ -19,9 +19,9 @@ const Routing = () => {
 
   return (
     <Routes>
-      <Route path='/' element={<PrivateRoute/>}>
+      <Route path={'/'} element={<PrivateRoute/>}>
         {routes.map((props) => <Route {...props}/>)}
-        <Route path='/login' element={<Login/>}/>
+        <Route path={'/login'} element={<Login/>}/>
       </Route>
     </Routes>
   );

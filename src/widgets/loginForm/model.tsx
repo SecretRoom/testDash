@@ -17,7 +17,7 @@ const LoginForm = () => {
       return loginA(data)
     },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    onSuccess: ({ data }: any )  => {
+    onSuccess: ({ data })  => {
       localStorage.setItem('isAuth', '1')
       setUserData(data)
       navigate("/")
@@ -44,7 +44,7 @@ const LoginForm = () => {
     return(() =>{
       document.removeEventListener('keyup', pressEnter)
     }) 
-  }, [])
+  }, [login,psw])
 
   return (
     <UI 
