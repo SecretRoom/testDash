@@ -21,8 +21,8 @@ const Info = ({ items }: { items: Chart['items'] }) => {
           bg={useColorModeValue('white', 'gray.700')}
         >
         <Stat>
-          <StatLabel ><Heading>{item.title}</Heading></StatLabel>
-          <StatNumber fontSize='4em'  lineHeight='0.8'>{Intl.NumberFormat('ru', {notation: "compact"}).format(item.value)}</StatNumber>
+          <StatLabel><Heading noOfLines={1} size='md'>{item.title}</Heading></StatLabel>
+          <StatNumber fontSize='4rem'  lineHeight='0.8'>{Intl.NumberFormat('ru', {notation: "compact"}).format(item.value)}</StatNumber>
         </Stat>
         </Box>), 
         items

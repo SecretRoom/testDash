@@ -157,7 +157,7 @@ const ChartCard = <T extends Chart>({ data, index, moveCard, dropCard }: ChartCa
       />
       {(keys(items).length > 1 || data.title) && (
         <Box display='flex'>
-          {isNotNil(data.title) && <Heading lineHeight={1}><b>{data.title}</b></Heading>}
+          {isNotNil(data.title) && <Heading lineHeight={1} size='md'><b>{data.title}</b></Heading>}
           {keys(items).length > 1 && 
             <RadioGroup onChange={setNumber} value={number} paddingLeft='10px' alignSelf='end'>
               <Stack direction='row'>
